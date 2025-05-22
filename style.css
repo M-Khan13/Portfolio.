@@ -1,0 +1,572 @@
+body {
+  font-family: Arial, sans-serif;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  padding-top: 20px;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+.navbar {
+  height: 05vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-family: "Darker Grotesque";
+}
+.navbar h1{
+  font-weight: 400;
+  font-size: 25px;
+  justify-content: flex-start;
+  
+
+}
+.nav-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 25%; /* optional: make it circular */
+  object-fit: cover;
+  /* margin-right: 1px; */
+}
+.navbar nav a {
+  color: #000;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 25px;
+}
+.navbar nav a:hover {
+   text-decoration: underline;
+    text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  
+
+}
+.nav-link btn-link{
+  background: none;
+  border: none;
+
+}
+.container {
+ padding-left: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.welcome {
+font-family: "Darker Grotesque";
+font-weight:500 ;
+  font-size: 30px;
+  color: #444;
+  margin-top: 50px;
+}
+
+.description {
+    font-family: "Space Grotesk";
+  font-size: 45px;
+  font-weight: 500;
+  margin: 1px 0;
+}
+.description p{
+    margin-top: 1px;
+}
+.light {
+    font-weight: 400;
+    opacity: 50%;
+}
+.light img{
+    opacity: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.state-logo {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  
+
+}
+.state-logo2 {
+  height: 40px;
+  width: 40px;
+  border-top-left-radius: 50%; 
+  border-top-right-radius: 50%; 
+  border-bottom-right-radius: 50%; /* optional: make it circular */
+  object-fit: cover;
+
+}
+
+
+.custom-btn{
+  display: flex;
+  align-self: flex-start; /* Align left within flex container */
+  padding: 10px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+  color: black;
+  font-family: "Sulphur Point";
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+/* Animate underline on the span, not the whole button */
+.btn-text {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px; /* Hug the text */
+  height: 1.5px;
+  width: 0%;
+  background-color: black;
+  transition: width 0.4s ease;
+}
+
+.custom-btn:hover .btn-text::after {
+  width: 100%;
+}
+
+.custom-btn2 {
+  display: flex;
+  align-self: flex-start; /* Align left within flex container */
+  padding: 10px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+  color: antiquewhite;
+  font-family: "Sulphur Point";
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+/* Animate underline on the span, not the whole button */
+.btn-text {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px; /* Hug the text */
+  height: 1.5px;
+  width: 0%;
+  background-color: antiquewhite;
+  transition: width 0.4s ease;
+}
+
+.custom-btn2:hover .btn-text::after {
+  width: 100%;
+}
+.arrow-icon {
+  width: 24px;         /* Bigger size */
+  height: 24px;
+  margin-left: 10px;   /* Space between text and icon */
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+h1:hover .arrow-icon {
+  transform: translateX(5px); /* Optional: animate on hover */
+}
+.right {
+    font-family: "Sulphur Point";
+  font-size: 15px;
+  color: #000;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start; /* Align left when stacked */
+  }
+
+  .right {
+    order: 1; /* Para comes first */
+    width: 100%;
+  }
+
+  .custom-btn {
+    order: 2; /* Button comes second */
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.ticker-wrap {
+    font-family: "Space Grotesk";
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+  background: none; /* background strip */
+  position: relative;
+  margin-top: 50px;
+}
+
+.ticker {
+  display: flex;
+  width: fit-content;
+  animation: ticker-scroll 12s linear infinite;
+}
+
+.ticker-item {
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 10px;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  padding-right: 2rem; /* spacing between repetitions */
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.Strip-logo {
+  height: 20px;
+  width: 20px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%; /* optional: make it circular */
+  object-fit: cover;
+  /* margin-right: 1px; */
+}
+
+
+
+.zigzag-row {
+    padding-left: 20px;
+    padding-right: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 10px 0;
+  gap: 2px;
+}
+
+.zigzag-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.zigzag-img img {
+margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.zigzag-text {
+    font-family: "Darker Grotesque";
+  max-width: 400px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.zigzag-text h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .zigzag-row,
+  .zigzag-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .zigzag-img img {
+    max-width: 90%;
+  }
+
+  .zigzag-text {
+    max-width: 90%;
+    align-items: center;
+    margin-left: 20px;
+  }
+}
+.section-line3{
+  height: 1.5px;
+  background-color: black;
+  width: 100%;
+  margin: 50px auto;
+
+}
+.workflow-full {
+  width: 100%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.workflow-full h3 {
+    font-family: "Space Grotesk";
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.flow-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.flow-step h1 {
+    
+  font-size: 100px;
+  color: #2c3e50;
+  margin: 0;
+  flex: 1;
+  min-width: 100px;
+  opacity: 50%;
+}
+
+.flow-step p {
+    font-family: "Sulphur Point";
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+  text-align: left;
+  flex: 4;
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .flow-step {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .flow-step h1 {
+    margin-bottom: 10px;
+  }
+
+  .flow-step p {
+    text-align: left;
+  }
+}
+
+.flex-footer {
+    width: 97vw;
+  background-color: #111;
+  color: #fff;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Background Text */
+.footer-background-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25vw;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  inset: 0;
+  font-family: "Ojuju";
+}
+
+/* Main Content */
+.footer-main-content {
+    font-family: "Della Respira";
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 1;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+}
+
+/* Left */
+.footer-left {
+ 
+  flex: 1;
+  min-width: 250px;
+}
+.footer-left p {
+    opacity: 50%;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.footer-btn {
+  background-color: #fff;
+  color: #111;
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.footer-btn:hover {
+  background-color: #ccc;
+}
+
+/* Right */
+.footer-right {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex: 0.5;
+  min-width: 150px;
+  align-items: flex-start;
+}
+.footer-right a {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+}
+.footer-right a:hover {
+  color: #999;
+}
+/* Dark Mode Toggle Style Link */
+#dark-Toggle {
+  cursor: pointer;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+  background-color: #111;
+  color: #f9f9f9;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .workflow-full,
+body.dark-mode .container,
+body.dark-mode .zigzag-row,
+body.dark-mode .ticker-wrap {
+  background-color: #111;
+  color: #fff;
+}
+
+body.dark-mode .navbar nav a,
+body.dark-mode .welcome,
+body.dark-mode .custom-btn,
+body.dark-mode .custom-btn2,
+body.dark-mode .right,
+body.dark-mode .footer-left p,
+body.dark-mode .footer-right a,
+body.dark-mode .flow-step p {
+  color: #eee;
+}
+
+body.dark-mode .flow-step h1 {
+  color: #aaa;
+  opacity: 80%;
+}
+
+body.dark-mode .section-line3 {
+  background-color: #555;
+}
+
+body.dark-mode .footer-btn {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark-mode .footer-btn:hover {
+  background-color: #333;
+}
+
+body.dark-mode .footer-right a:hover {
+  color: #ccc;
+}
+
+body.dark-mode .btn-text::after {
+  background-color: #eee;
+}
+body.dark-mode .ticker-wrap {
+  background-color: #111; /* Or another subtle dark color */
+}
+
+body.dark-mode .ticker-item {
+  color: #f9f9f9;
+}
+@media (max-width: 768px) {
+  .footer-main-content {
+    width: 80%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 80%;
+  }
+
+  .footer-left p {
+    font-size: 1.8rem; /* Slightly smaller for smaller screens */
+    text-align: left;
+  }
+
+  .custom-btn2 {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+  }
+
+  .footer-right a {
+    font-size: 1rem;
+  }
+
+  .footer-background-text {
+    font-size: 30vw; /* Scale huge background text */
+  }
+
+  .arrow-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

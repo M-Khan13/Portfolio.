@@ -1,0 +1,751 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: antiquewhite;
+  color: #000;
+}
+
+/* Navbar (20% height) */
+.navbar {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-family: "Darker Grotesque";
+}
+.navbar h1{
+  font-weight: 400;
+  font-size: 25px;
+  justify-content: flex-start;
+  
+
+}
+.nav-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 25%; /* optional: make it circular */
+  object-fit: cover;
+  /* margin-right: 1px; */
+}
+.navbar nav a {
+  color: #000;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 25px;
+}
+.navbar nav a:hover {
+   text-decoration: underline;
+    text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  
+
+}
+.nav-link btn-link{
+  background: none;
+  border: none;
+
+}
+
+body.dark-mode {
+  background-color: #000;
+  color: antiquewhite;
+}
+
+body.dark-mode .navbar {
+  background-color: #000;
+  color: antiquewhite;
+}
+
+body.dark-mode .nav-link {
+  color: antiquewhite;
+}
+body.dark-mode .footer{
+  background-color: #000;
+}
+
+
+/* Main content (70% height, horizontal split) */
+.content {
+  height: 80vh;
+  display: flex;
+
+}
+
+/* Left Section (30% width) */
+.left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Della Respira";
+}
+.left-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+  font-size: 80px;
+
+
+}
+
+.left-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+
+}
+
+/* Right Section (70% width) */
+.right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.right-top{
+   display: flex;
+  justify-content:flex-start;
+  align-items:center;
+  flex: 1;
+  padding: 20px;
+  font-size: 80px;
+  font-family:"Della Respira";
+  /* border: 1px solid #ccc; */
+
+}
+
+.right-bottom {
+  font-size: 25px;
+   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  padding: 10px;
+  font-family: "Space Grotesk";
+  font-weight: 400;
+}
+.custom-btn {
+  display: flex;
+  align-self: flex-start; /* Align left within flex container */
+  padding: 10px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+  color: black;
+  font-family: "Sulphur Point";
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+/* Animate underline on the span, not the whole button */
+.btn-text {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px; /* Hug the text */
+  height: 1.5px;
+  width: 0%;
+  background-color: black;
+  transition: width 0.4s ease;
+}
+
+.custom-btn:hover .btn-text::after {
+  width: 100%;
+}
+body.dark-mode .custom-btn{
+  color: antiquewhite;
+}
+body.dark-mode .btn-text::after {
+  background-color: antiquewhite;
+}
+
+
+
+.arrow-icon {
+  width: 24px;         /* Bigger size */
+  height: 24px;
+  margin-left: 10px;   /* Space between text and icon */
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+h1:hover .arrow-icon {
+  transform: translateX(5px); /* Optional: animate on hover */
+}
+
+/* Each page takes full viewport height */
+body2
+.page2 {
+  margin-top: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Keep these from your current CSS */
+.empty-top2 {
+  height: 10vh;
+}
+
+.content2 {
+  height: 80vh;
+  display: flex;
+}
+.left2, .right2 {
+  display: flex;
+  flex-direction: column;
+}
+.left2 {
+  width: 30%;
+}
+.right2 {
+  width: 70%;
+}
+.left-top2{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 40px;
+  align-items: center;
+  font-size: 100px;
+  opacity: 50%;
+}
+.right-top2 h2{
+  font-family: "Space Grotesk";
+  font-size: 50px;
+}
+.right-top2 p{
+  font-family: "Space Grotesk";
+  font-size: 20px;
+}
+.right-bottom2 h2{
+  font-family: "Space Grotesk";
+  font-size: 50px;
+}
+.right-bottom2 p{
+  font-family: "Space Grotesk";
+  font-size: 20px;
+}
+.left-bottom2 {
+ flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 40px;
+  align-items: center;
+  font-size: 100px;
+  opacity: 50%;
+}
+ .right-top2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  flex: 1;
+}
+.right-bottom2 {
+   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  flex: 1;
+}
+
+
+.section-line2{
+  height: 1.5px;
+  background-color: black;
+  width: 90%;
+  margin: 0 auto;
+
+}
+body.dark-mode .page2,
+body.dark-mode .content2,
+body.dark-mode .left2,
+body.dark-mode .right2,
+body.dark-mode .left-top2,
+body.dark-mode .left-bottom2,
+body.dark-mode .right-top2,
+body.dark-mode .right-bottom2 {
+  background-color: #000;
+  color: antiquewhite;
+}
+
+/* Specifically override text color */
+body.dark-mode .section-heading,
+body.dark-mode .section-para,
+body.dark-mode .left-top2,
+body.dark-mode .left-bottom2 {
+  color: antiquewhite;
+}
+
+/* Line color remains antique white */
+body.dark-mode .section-line2 {
+  background-color: antiquewhite;
+}
+
+/* Button text and underline */
+body.dark-mode .custom-btn2 {
+  color: antiquewhite;
+}
+body.dark-mode .custom-btn2 .btn-text::after {
+  background-color: antiquewhite;
+}
+
+.custom-btn2 {
+  display: flex;
+  align-self: flex-start; /* Align left within flex container */
+  padding: 10px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+  color: black;
+  margin-top: 20px;
+  font-family: "Sulphur Point";
+}
+
+/* Animate underline on the span, not the whole button */
+.btn-text {
+  position: relative;
+  display: inline-block;
+}
+
+
+.btn-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px; /* Hug the text */
+  height: 1.5px;
+  width: 0%;
+  background-color: black;
+  transition: width 0.4s ease;
+}
+
+.custom-btn2:hover .btn-text::after {
+  width: 100%;
+}
+.page3 {
+  height: 100vh;
+  background-color: antiquewhite;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-top3 {
+  height: 10vh;
+}
+
+.project-box {
+  width: 90%;
+  background-color: antiquewhite;
+  padding: 40px;
+  border-radius: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Space Grotesk";
+  
+}
+
+.project-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  font-family: "Space Grotesk";
+}
+
+.project-list {
+  list-style: none;
+  font-size: 1.2rem;
+  line-height: 2;
+  font-size: 50px;
+}
+
+/* Dark Mode Support for Page 3 */
+body.dark-mode .page3 {
+  background-color: #000;
+  color: antiquewhite;
+}
+
+body.dark-mode .project-box {
+  background-color: #000;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .project-heading {
+  border-bottom: 2px solid antiquewhite;
+}
+.section-line3{
+  height: 1.5px;
+  background-color: black;
+  width: 100%;
+  margin: 0 auto;
+
+}
+.portfolio-images-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left Section */
+.portfolio-left {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Space Grotesk";
+}
+.portfolio-left img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Right Section */
+.portfolio-right {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+}
+.portfolio-right img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+/* Hover effect for images in both left and right sections */
+.portfolio-left img,
+.portfolio-right img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Hover state */
+.portfolio-left img:hover,
+.portfolio-right img:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+/* Optional: Dark Mode Support */
+body.dark-mode .section-line3 {
+  background-color: antiquewhite;
+}
+
+
+
+
+
+
+
+
+
+/* Footer (10% height) - empty space */
+.footer {
+  height: 10vh;
+  background: transparent;
+}
+.custom-footer {
+  display: flex;
+  height: 50vh; /* 50% of viewport height */
+  background-color: antiquewhite;
+  color: #000;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+/* Left section only has bottom content */
+.footer-left-bottom {
+  margin-top: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-left-bottom a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+  font-family: "Sulphur Point";
+  font-size: 1.2rem;
+}
+
+.footer-left-bottom a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.footer-left-bottom a:hover::after {
+  width: 100%;
+}
+.footer-right-top p{
+  font-family: "Della Respira";
+  font-size: 50px;
+}
+
+
+/* Right section split vertically: 60% top, 40% bottom */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-right-top {
+  flex: 6;
+  display: flex;
+  align-items: flex-start;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.footer-right-bottom {
+  flex: 4;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact-btn {
+  padding: 12px 28px;
+  background-color: antiquewhite;
+  color: #111;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-contact-btn:hover {
+  background-color: #ddd;
+}
+
+body.dark-mode .custom-footer {
+  background-color: #000;
+  color: antiquewhite;
+}
+
+body.dark-mode .footer-left-bottom a {
+  color: antiquewhite;
+}
+
+body.dark-mode .footer-left-bottom a::after {
+  background-color: antiquewhite;
+}
+
+body.dark-mode .footer-right-top p {
+  color: antiquewhite;
+}
+
+body.dark-mode .footer-contact-btn {
+  background-color: #000;
+  color: antiquewhite;
+  border: 1px solid antiquewhite;
+}
+
+body.dark-mode .footer-contact-btn:hover {
+  background-color: #222;
+}
+
+/* ========== RESPONSIVE FIXES ========== */
+@media (max-width: 1024px) {
+  .content,
+  .content2 {
+    flex-direction: column;
+  }
+.footer, .empty-top2{
+  display: none;;
+}
+.project-list li{
+  font-size: 30px;;
+
+}
+  .left, .right,
+  .left2, .right2 {
+    width: 100%;
+  }
+
+  /* Page 1 Order - skip left-bottom */
+  .left, .right {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  .left-top {
+    order: 1;
+    align-items: flex-start;
+  }
+  .left-bottom {
+    display: none; /* Skipping left-bottom */
+  }
+
+  /* .right {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  } */
+  .right-top {
+    order: 2;
+  }
+  .right-bottom {
+    order: 3;
+  }
+  .custom-btn{
+    order: 4;
+  }
+
+  /* Page 2 proper order */
+  /* .left2 {
+    order: 1;
+  } */
+  .left-top2 {
+    display: none;
+    /* order: 1; */
+  }
+  .left-bottom2 {
+    /* order: 8; */
+    display:none;
+  }
+
+  .right2 {
+    order: 2;
+  }
+  .right-top2 {
+    order: 2;
+  }
+  .right-bottom2 {
+    order: 4;
+  }
+/* .content{
+  height: 80%;
+} */
+  /* Responsive typography scale down */
+  .left-top, .left-top2,
+  .left-bottom2,
+  .right-top, .right-top2 h2,
+  .right-bottom2 h2 {
+    font-size: 40px !important;
+  }
+
+  .right-bottom, .right-top2 p, .right-bottom2 p {
+    font-size: 18px !important;
+  }
+
+  /* Buttons always on new line */
+  .custom-btn {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: fit-content;
+    font-size: 15px;
+  }
+   .custom-btn2 {
+    margin-top: 20px;
+    margin-left: 0;
+    width: fit-content;
+    font-size: 15px;
+  }
+
+
+  /* Arrow icon fix */
+  .arrow-icon {
+    position: relative;
+    top: 2px;
+  }
+
+  /* === Portfolio Images Section (stacked) === */
+  .portfolio-images-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .portfolio-left,
+  .portfolio-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-left img,
+  .portfolio-right img {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+  }
+
+  /* === Footer === */
+  .custom-footer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 50px;
+  }
+
+  .footer-right-top p {
+    font-size: 30px;
+  }
+
+  .footer-left-bottom {
+    justify-content: center;
+  }
+
+  .footer-contact-btn {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
